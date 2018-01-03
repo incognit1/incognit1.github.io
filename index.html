@@ -1,21 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<<<<<<< HEAD
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>Лещенко Владислав1</title>
+    <title>Лещенко Владислав</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libs/fa/font-awesome.min.css">
     <script src="libs/jquery/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.plaxmove.js"></script>
 </head> 
-=======
-	<meta charset="UTF-8">
-	<title>Hello</title>
-</head>
->>>>>>> parent of 946ad68... Second commit
 <body>
-	This is first pages on GitHub
+<div class="layer0" style="transition: .2s;"></div>
+<div class="layer1" style="top: 13px; left: 8.225px; transition: .2s;"></div>
+<div class="layer2" style="top: 25.05px; left: -4.45px; transition: .2s;"></div>
+<div class="layer3" style=" left: 138.6px; top: -180px; transition: .2s;"></div>
+
+<a class="flip_bg" onclick="document.querySelector('.flip-container').classList.toggle('hover');"></a>
+<button class="logIn" onclick="document.querySelector('.flip-container').classList.toggle('hover');">Авторизироваться</button>
+
+<div id="greeting" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+           <img src="img/Vlad_Leshenko.jpg" alt="Лещенко Владислав">
+            <h1>Лещенко Владислав</h1>
+            <p>Личный сайт веб-разработчика</p>
+            <p class="social"></p>
+            <nav>
+                <a href="#">Мои работы</a>
+                <a href="#">Обо мне</a>
+                <a href="#">Блог</a>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+    </div>
+    <div class="back">
+            <p>Если у вас есть вопрос напишите, или позвоните мне:</p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:380687771953">+380687771953</a>
+                <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:380635085090">+380635085090</a>
+            </p>
+            <div class="wrapper">
+              <div class="material-textfield blue">
+                <input type="text" required />
+                <label data-content="имя">имя</label>
+              </div>
+              
+              <div class="material-textfield red">
+                 <input type="email" required/>
+                 <label data-content="email">email</label>
+              </div>
+            </div>
+            <nav>
+                <a href="#" onclick="document.querySelector('.flip-container').classList.toggle('hover');">Назад</a>
+            </nav>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+    $('.layer0').plaxmove({ratioH:0.005,ratioV:0.005})
+    $('.layer1').plaxmove({ratioH:0.01,ratioV:0.01})
+    $('.layer2').plaxmove({ratioH:0.03,ratioV:0.03})
+    $('.layer3').plaxmove({ratioH:0.05,ratioV:0.05})
+});
+</script>
+
 </body>
 </html>
+
