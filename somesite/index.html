@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tasker</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="data.json"></script>
+
+</head>
+<body>
+	<div id="wrapper" class="zoomIn">
+		<h1>Мой список задач:</h1>
+		<ul id="tasks">
+		</ul>
+		<button id="createTask" class="bounceInLeft">Добавить новую задачу</button>
+		<button id="deleteTasks">Удалить выполненные задачи</button>
+		
+		<footer>
+			<p>Для изменения любой задачи нажмите на нее правой кнопокой мыши</p>
+			<p id="bg-param">Выбрать цвет фона<input type="color" id="bg" list="colorList">
+			<datalist id="colorList">
+				<option value="#333333" label="Серый">
+				<option value="#3e2424" label="Зелёный">
+				<option value="#ada16c" label="Синий">
+				<option value="#30434a" label="Синий">
+				<option value="#4f6d51" label="Синий">
+			</datalist>
+		</footer>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
