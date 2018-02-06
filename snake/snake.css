@@ -12,6 +12,7 @@ table {
   border: 30px solid #805744;
   margin: 0 auto;
   background: #baffba;
+  min-width: 800px;
 }
 
 td {
