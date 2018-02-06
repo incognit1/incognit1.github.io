@@ -1,6 +1,6 @@
 //settings
-var rows = 15,             // Height of map
-    columns = 26,          // Width of map
+var rows = 14,             // Height of map
+    columns = 23,          // Width of map
     increment = 1,         // Growth of snake
     intervalTime = 110;    // Speed game
 
@@ -67,6 +67,7 @@ function start(){
 
     else if(gameOver) {
       menu.style.display = 'block';
+      newGame.focus();
       gameOver = true;
       gameStart = false;
     }
@@ -89,8 +90,9 @@ function createMap() {
       div = document.createElement('div'),
       darkness = document.createElement('div'),
       main = document.createElement('div'),
-      newGamebtn = document.createElement('button'),
-      rec = document.createElement('p');
+      newGamebtn = document.createElement('input'),
+      rec = document.createElement('p'),
+      info = document.createElement('p'),
       loseP = document.createElement('p');
 
   for(var i = 0; i < rows; i++) {
@@ -109,8 +111,12 @@ function createMap() {
   darkness.className = 'darkness';
   div.className = 'wrapper';
   newGamebtn.className = 'newGame';
+  info.className = 'info';
 
-  newGamebtn.innerHTML = 'Новая игра';
+
+  newGamebtn.type = "button";
+  newGamebtn.value = 'Новая игра';
+  info.innerHTML = 'Нажмите Enter чтобы начать новую игру';
   loseP.innerHTML = 'Вы проиграли';
   p.style.display = 'none';
 
@@ -123,6 +129,7 @@ function createMap() {
 
   darkness.appendChild(newGamebtn);
   darkness.appendChild(loseP);
+  darkness.appendChild(info);
   div.appendChild(darkness);
   div.appendChild(map);
   document.body.appendChild(main);
@@ -179,9 +186,10 @@ function createWall() {
 
 
 window.addEventListener('keydown', function(e) {
-    if(e.keyCode == 40 && route !== 38 || e.keyCode == 39  && route !== 37 || e.keyCode == 38  && route !== 40 || e.keyCode == 37  && route !== 39) {
+  console.log(e.keyCode);
+    if(e.keyCode == 40 && route !== 1 || e.keyCode == 39  && route !== 4 || e.keyCode == 38   && route !== 3 || e.keyCode == 37  && route !== 2 ||
+       e.keyCode == 83 && route !== 1 || e.keyCode == 68  && route !== 4 || e.keyCode == 87   && route !== 3 || e.keyCode == 65  && route !== 2) {
       direction = e.keyCode;
-
       if(!gameStart) gameStart = true;
     }
 
@@ -198,42 +206,43 @@ newGame.addEventListener('click', function(){
 
 // Updates
 function update() {
-  if (direction == 40) { //down
-    if (currentY < table.rows.length - 1) {
-      currentY++;
-      headDir = '0px 0px 10px 10px';
-      move();
-      route = 40;
-    }
-    else { gameOver = true; }
-  }
 
-  if (direction == 38) { // Top
+  if (direction == 38 || direction == 87) { // Top
     if (currentY > 0) {
       currentY--;
       headDir = '10px 10px 0px 0px';
       move();
-      route = 38;
+      route = 1;
     }
     else { gameOver = true; }
   }
 
-  if (direction == 39) { // Right
+  if (direction == 39 || direction == 68) { // Right
     if (currentX < table.rows[currentY].cells.length - 1) {
       currentX++;
       headDir = '0px 10px 10px 0px';
       move();
-      route = 39;
+      route = 2;
     }
     else { gameOver = true; }
   }
 
-  if (direction == 37) { // Left
+  if (direction == 40 || direction == 83) { //down
+    if (currentY < table.rows.length - 1) {
+      currentY++;
+      headDir = '0px 0px 10px 10px';
+      move();
+      route = 3;
+    }
+    else { gameOver = true; }
+  }
+
+  if (direction == 37 || direction == 65) { // Left
     if (currentX > 0) {
       currentX--;
       headDir = '10px 0px 0px 10px';
       move();
-      route = 37;
+      route = 4;
     }
     else { gameOver = true; }
   }

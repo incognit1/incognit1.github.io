@@ -12,7 +12,6 @@ table {
   border: 30px solid #805744;
   margin: 0 auto;
   background: #baffba;
-  min-width: 800px;
 }
 
 td {
@@ -74,7 +73,7 @@ p, .scope {
   position: relative;
 }
 
-.wrapper button {
+.wrapper input {
   position: absolute;
   top: 50%;
   left: 41%;
@@ -86,6 +85,7 @@ p, .scope {
   font-family: Arial;
   cursor: pointer;
   outline: none;
+  box-shadow: 0 0 63px #7d3b3b;
 }
 
 .darkness p {
@@ -98,6 +98,13 @@ p, .scope {
 
 .anim-extinction {
   animation: anim-extinction ease 1s;
+}
+
+.info {
+  top: 32% !important;
+  font-size: 16px;
+  font-family: Arial;
+  text-transform: none;
 }
 
 
