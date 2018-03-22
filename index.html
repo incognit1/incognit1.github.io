@@ -29,9 +29,37 @@
                     paddingTop: '20px',
                     css3: true,
                     onLeave: function (index, nextIndex, direction) {
+                        if (index === 1) {
+                            $('#section0').find('.title-menu').removeClass('open')
+                                .addClass('close');
+                        }
+
+                        else if (index ===2 ) {
+                            $('#section2').find('.title-menu').removeClass('open')
+                                .addClass('close');
+                        }
                         console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " + direction);
                     },
-                    afterLoad: function (anchorLink, index) {
+                    afterLoad: function(anchorLink, index) {
+                        if (index === 1) {
+                            $('#section0').find('.title-menu').removeClass('close')
+                                .addClass('open');
+                        }
+
+                        else if (index === 2) {
+                            $('#section2').find('.title-menu').removeClass('close')
+                                .addClass('open');
+                        }
+
+                        // if(anchorLink === 'firstPage'){
+                        //     //moving the image
+                        //     $('#section0').find('.title-menu').delay(500).animate({
+                        //         left: '50% !important'
+                        //     }, 1500, 'easeOutExpo');
+                        //
+                        // }
+
+
                         console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
                     },
                     afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
@@ -199,8 +227,8 @@
                 </div>
                 <span>Angular 2+</span>
                 <div class="progress">
-                    <div class="determinate" style="width:50%"></div>
-                    <span>50%</span>
+                    <div class="determinate" style="width:60%"></div>
+                    <span>60%</span>
                 </div>
             </div>
 
@@ -335,6 +363,18 @@
             <a href=""><i class="fab fa-linkedin-in"></i></a>
     </div>
 
+    <!--<script>-->
+        <!--var titles = document.getElementsByClassName('title-menu');-->
+
+        <!--window.addEventListener("hashchange", function(e) {-->
+            <!--for(var i = 0; i < titles.length; i++) {-->
+                <!--titles[i].classList.remove('open');-->
+                <!--titles[i].classList.add('open');-->
+                <!--console.log(titles[i]);-->
+            <!--}-->
+
+        <!--}, false)-->
+    <!--</script>-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </body>
 

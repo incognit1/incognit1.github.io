@@ -183,7 +183,7 @@ p {
   text-transform: uppercase;
   font-family: Impact;
   letter-spacing: 8px;
-  opacity: 0.1;
+  opacity: 0;
   width: 100%; }
 
 /*Skills section*/
@@ -192,12 +192,12 @@ p {
   float: left; }
 
 .progress {
-  background: #a0a0a0;
+  background: #ededed;
   position: relative;
   text-align: center; }
 
 .determinate {
-  background: #444;
+  background: #3f8bb9;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -279,5 +279,26 @@ p {
 /*last page*/
 #section6 p {
   color: #bdbdbd; }
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: scale(1.7) translate(-29%, -50%); }
+  to {
+    opacity: 0.1;
+    transform: scale(1) translate(-50%, -50%); } }
+@keyframes close {
+  from {
+    opacity: 0.1;
+    transform: scale(1) translate(-50%, -50%); }
+  to {
+    opacity: 0;
+    transform: scale(1.9) translate(-29%, -50%); } }
+.open {
+  opacity: 0.1;
+  animation: open .3s ease; }
+
+.close {
+  animation: close .3s ease; }
 
 /*# sourceMappingURL=main.css.map */
