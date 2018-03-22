@@ -1,0 +1,321 @@
+/*Reset*/
+
+/*-------------------------------*/
+$color1: #444;
+$color2: #a0a0a0;
+$color3: #3f8bb9;
+
+@import 'reset';
+
+body{
+  font-family: Arial;
+  color: rgba(0,0,0,0.5);
+  background: #fff;
+}
+.wrap{
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  position: relative;
+}
+
+h1, h2, h3, h4, p {
+  color: $color1;
+}
+
+h1{
+  font-size: 50px;
+}
+
+h2{
+  font-size: 40px;
+  padding: 35px 0 50px 0px;
+  position: relative;
+}
+
+p{
+  font-size: 18px;
+  color: $color1;
+  margin: 10px 0;
+}
+
+.section, p{
+  text-align: left;
+}
+
+#section0 p, #section6, h2, h3, .item p, #section6 p{
+  text-align: center;
+}
+
+/* menu */
+
+#menu li a,
+#menu li.active a{
+  padding: 9px 18px;
+  display:block;
+}
+#menu li.active a{
+  color: #fff;
+}
+#menu{
+  padding: 0;
+  margin:0;
+  height: auto;
+  z-index: 70;
+  width: 200px;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 45px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  & li {
+    display: inline-block;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.91);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  li a{
+    text-decoration:none;
+    color: $color1;
+  }
+
+  & li.active {
+    background: none !important;
+  }
+  & li.active a {
+    color: #000 !important;
+  }
+
+  & li.active a svg {
+    padding: 7px;
+    display: inline-block;
+    transition: .4s;
+    color: #fff;
+    background: $color3;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    margin-bottom: -5px;
+    margin-right: 5px;
+  }
+
+  & li:hover a{
+    transition: .4s;
+  }
+
+  & li a svg {
+    transition: .4s;
+    margin-right: 4px;
+  }
+
+}
+
+
+/* Overwriting styles for control arrows for slides
+* --------------------------------------- */
+.fp-controlArrow.fp-prev {
+  left: 50px;
+}
+.fp-controlArrow.fp-next{
+  right: 50px;
+}
+
+
+
+.section  {
+  padding-left: 20%;
+  padding-right: 10%;
+}
+
+#logo {
+  height: auto;
+  z-index: 70;
+  width: 255px;
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 64px;
+
+  span {
+    color: $color3;
+    font-size: 14px;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+    border-radius: 100%;
+    border: 2px solid #FFF;
+    float: left;
+    margin-right: 15px;
+  }
+
+  h1 {
+    color: #333;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+
+#social {
+  height: auto;
+  z-index: 70;
+  width: auto;
+  display: block;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 30px;
+
+  a {
+    color: #fff;
+  }
+}
+
+.title-menu {
+  position: absolute;
+  top: 50%;
+  font-size: 140px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: Impact;
+  letter-spacing: 8px;
+  opacity: 0.1;
+  width: 100%;
+}
+
+/*Skills section*/
+
+.progress-wrapper{
+  width: 50%;
+  float: left;
+}
+
+.progress {
+  background: $color2;
+  position: relative;
+  text-align: center;
+}
+
+.determinate {
+  background: $color1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.progress span {
+  color: #fff;
+  position: relative;
+  margin: 3px;
+}
+
+.progress-wrapper span {
+  margin: 10px 0 5px 0px;
+  display: inline-block;
+}
+
+.skills {
+  margin-top: 20px;
+  padding: 10px;
+  overflow: hidden;
+  text-align: right;
+}
+
+.skills span {
+  background: #ededed;
+  display: inline-block;
+  padding: 7.5px 10px;
+  color: #000;
+  margin: 2px 2px 5px 2px;
+  cursor: pointer;
+}
+
+/*Skills section end*/
+
+/*work*/
+
+
+/*work end*/
+
+
+/*portfolio*/
+.item {
+  margin-top: 20px;
+  border: 2px solid #ededed;
+  flex-grow: 1;
+
+  .title {
+    background: #ededed;
+    margin: -4px 0px 0px 0px;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    font-size: 15px;
+    padding: 5px 5px;
+  }
+
+  img {
+    border-bottom: 2px solid #ededed;
+    width: 100%;
+  }
+
+  & + .item {
+    margin-left: 25px;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.fp-controlArrow {
+  display: none;
+}
+
+.fp-slidesNav.bottom {
+    bottom: 50px;
+    left: 50% !important;
+}
+
+.demo, .used {
+  color: $color1 !important;
+  margin: 2px 5px;
+  font-size: 20px;
+}
+
+.demo svg, .used svg {
+  margin:  0 3px;
+}
+
+.demo {
+  float: right;
+
+  a{
+    color: $color3;
+  }
+}
+ 
+/*portfolio end*/
+
+/*hobby*/
+
+
+/*hobby end*/
+
+/*last page*/
+#section6 p {
+  color: #bdbdbd;
+}

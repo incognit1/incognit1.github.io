@@ -1,75 +1,341 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>Лещенко Владислав</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="libs/fa/font-awesome.min.css">
-    <script src="libs/jquery/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery.plaxmove.js"></script>
-</head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            function initialization() {
+                $('#myContainer').fullpage({
+                    sectionsColor: [,,,,,,'#111'],
+                    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', 'lastPage'],
+                    resize: false,
+                    animateAnchor: false,
+                    scrollOverflow: true,
+                    autoScrolling: true,
+                    slidesNavigation: true,
+                    responsive: 900,
+                    fitSection: false,
+                    menu: '#menu',
+                    navigation: true,
+                    continuousVertical: false,
+                    paddingTop: '20px',
+                    css3: true,
+                    onLeave: function (index, nextIndex, direction) {
+                        console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " + direction);
+                    },
+                    afterLoad: function (anchorLink, index) {
+                        console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
+                    },
+                    afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                        console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+                    },
+                    onSlideLeave: function (anchorLink, index, slideIndex, direction) {
+                        console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
+                    },
+                    afterRender: function () {
+                        console.log("afterRender");
+                    },
+                    afterResize: function () {
+                        console.log("afterResize");
+                    }
+                });
+            }
+
+            //fullPage.js initialization
+            initialization();
+
+
+            $('#moveSectionUp').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSectionUp();
+            });
+
+            $('#moveSectionDown').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSectionDown();
+            });
+
+            $('#moveTo').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveTo(2, 3);
+            });
+
+            $('#silentMoveTo').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.silentMoveTo(2);
+            });
+
+            $('#silentMoveToSlide').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.silentMoveTo(2, 3);
+            });
+
+            $('#moveSlideRight').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSlideRight();
+            });
+
+            $('#moveSlideLeft').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSlideLeft();
+            });
+
+            $('#setAutoScrollingFalse').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setAutoScrolling(false);
+            });
+
+            $('#setAutoScrollingTrue').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setAutoScrolling(true);
+            });
+
+            $('#setAllowScrollingFalse').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setAllowScrolling(false);
+            });
+
+            $('#setAllowScrollingTrue').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setAllowScrolling(true);
+            });
+
+            $('#setKeyboardScrollingFalse').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setKeyboardScrolling(false);
+            });
+
+            $('#setKeyboardScrollingTrue').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setKeyboardScrolling(true);
+            });
+
+            $('#setScrollingSpeed1500').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setScrollingSpeed(2500);
+            });
+
+            $('#setScrollingSpeed700').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.setScrollingSpeed(700);
+            });
+
+
+            $('#setLockAnchorsTrue').click(function (e) {
+                e.preventDefault;
+                $.fn.fullpage.setLockAnchors(true);
+            });
+
+            $('#setLockAnchorsFalse').click(function (e) {
+                e.preventDefault;
+                $.fn.fullpage.setLockAnchors(false);
+            });
+        });
+
+
+    </script>
+    
+</head>
+
 <body>
-<div class="layer0" style="transition: .2s;"></div>
-<div class="layer1" style="top: 13px; left: 8.225px; transition: .2s;"></div>
-<div class="layer2" style="top: 25.05px; left: -4.45px; transition: .2s;"></div>
-<div class="layer3" style=" left: 138.6px; top: -180px; transition: .2s;"></div>
-
-<a class="flip_bg" onclick="document.querySelector('.flip-container').classList.toggle('hover');"></a>
-<button class="logIn" onclick="document.querySelector('.flip-container').classList.toggle('hover');">Авторизироваться</button>
-
-<div id="greeting" class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-           <img src="img/Vlad_Leshenko.jpg" alt="Лещенко Владислав">
-            <h1>Лещенко Владислав</h1>
-            <p>Личный сайт веб-разработчика</p>
-            <p class="social"></p>
-            <nav>
-                <a href="#">Мои работы</a>
-                <a href="#">Обо мне</a>
-                <a href="#">Блог</a>
-            </nav>
-            <div class="social">
-                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
+    <div id="logo">
+        <img src="./img/iam.jpg" alt="">
+        <h1>Лещенко Владислав</h1>
+        <span>Фронтенд разработчик</span>
     </div>
-    <div class="back">
-            <p>Если у вас есть вопрос напишите, или позвоните мне:</p>
-            <p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:380687771953">+380687771953</a>
-                <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:380635085090">+380635085090</a>
+    <ul id="menu">
+        <li data-menuanchor="firstPage">
+            <a href="#firstPage"><i class="fas fa-home"></i> Обо мне</a>
+        </li>
+        <li data-menuanchor="secondPage">
+            <a href="#secondPage"><i class="fas fa-code"></i> Навыки</a>
+        </li>
+        <li data-menuanchor="3rdPage">
+            <a href="#3rdPage"><i class="fas fa-desktop"></i> Опыт работы</a>
+        </li>
+        <li data-menuanchor="4thpage">
+            <a href="#4thpage"><i class="fas fa-university"></i> Образование</a>
+        </li>
+
+        <li data-menuanchor="5thpage">
+            <a href="#5thpage"><i class="fas fa-suitcase"></i> Портфолио</a>
+        </li>
+
+        <li data-menuanchor="6thpage">
+            <a href="#6thpage"><i class="fas fa-book"></i> Интересы</a>
+        </li>
+    </ul>
+    <div id="myContainer">
+        <!-- Обо мне -->
+        <div class="section" id="section0">
+            <h2>Добро пожаловать <i class="fas fa-hand-paper"></i><span class="title-menu">Обо мне</span></h2>
+            <p>
+                Меня зовут Лещенко Владислав. Я студент Киевского политехнического института имени Игоря Сикорского, где изучаю компьютерные науки. Также у меня есть опыт в веб-разработке!
             </p>
-            <div class="wrapper">
-              <div class="material-textfield blue">
-                <input type="text" required />
-                <label data-content="имя">имя</label>
-              </div>
-              
-              <div class="material-textfield red">
-                 <input type="email" required/>
-                 <label data-content="email">email</label>
-              </div>
+        </div>
+        
+        <!-- Навыки -->
+        <div class="section" id="section2">
+            <h2><i class="fas fa-code"></i> Профессиональные навыки<span class="title-menu">Навыки</span></h2>
+            
+            <div class="progress-wrapper">
+                <span>HTML/CSS</span>
+                <div class="progress">
+                    <div class="determinate" style="width:95%"></div>
+                    <span>95%</span>
+                </div>
+                <span>JavaScript</span>
+                <div class="progress">
+                    <div class="determinate" style="width:90%"></div>
+                    <span>90%</span>
+                </div>
+                <span>Angular 2+</span>
+                <div class="progress">
+                    <div class="determinate" style="width:50%"></div>
+                    <span>50%</span>
+                </div>
             </div>
-            <nav>
-                <a href="#" onclick="document.querySelector('.flip-container').classList.toggle('hover');">Назад</a>
-            </nav>
+
+            <div class="skills">
+                <span>ES6</span>
+                <span>Node.JS</span>
+                <span>npm</span>
+                <span>Bootstrap</span>
+                <span>SASS</span>
+                <span>Git</span>
+                <span>Photoshop</span>
+                <span>BEM</span>
+            </div>
+
+        </div>
+
+        <!-- Опыт работы -->
+        <div class="section" id="section4">
+            <h2><i class="fas fa-desktop"></i> Опыт работы <span class="title-menu">Опыт</span></h2>
+            <p>
+                Лето-осень 2017 – удаленная работа. Верстка шаблонов на WordPress.
+            </p>
+            <p>
+                Весна 2017 – удаленная работа. Моей задачей было преобразовывать сайты посредством регулярных выражений с использованием системы контроля версий.
+            </p>
+            <p>
+                2016 – верстка сайтов одногруппникам за деньги :)
+            </p>
+            <p>
+                2015-2016 – создание собственного интернет-магазина доставки цветов по Киеву Akito, где я был директором, программистом, консультантом, курьером и даже флористом.
+            </p>
+        </div>
+
+        <!-- Образование -->
+        <div class="section" id="section1">
+                <h2><i class="fas fa-university"></i> Образование<span class="title-menu">Образование</span></h2>
+                
+                <p>2015-2019 – учусь в Киевском политехническом институте им. Игоря Сикорского на третьем курсе. Факультет: Теплоэнергетический. Специальность: компьютерные науки. Форма обучения: очная.</p>
+                <p>2017 – закончил курсы JavaScript Advanced в CyberBionic Systematics. Результаты тестирования на TestProvider: 975 баллов из 1000. Номер Сертификата: TP94638303. </p>
+            </div>
+
+        <!-- Портфолио -->
+        <div class="section" id="section3">
+            <div class="slide" data-anchor="slide1">
+                <h2><i class="fas fa-suitcase"></i> Портфолио<span class="title-menu">Портфолио</span></h2>
+
+                <div class="flex">
+                    <div class="item">
+                        <img src="img/snake.jpg" alt="img/snake.jpg">
+                        <p class="title">Snake</i></p>
+                        <p class="description">Игра написанная на чистом JavaScript</p>
+                        <span class="used"><i class="fab fa-js-square"></i> </span>
+                        <span class="demo">
+                            <a href=""><i class="fas fa-play"></i></a>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </span>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/snake.jpg" alt="img/snake.jpg">
+                        <p class="title">Snake</p>
+                        <p class="description">Игра написанная на чистом JavaScript</p>
+                        <p class="used"><i class="fab fa-js-square"></i></p>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/snake.jpg" alt="img/snake.jpg">
+                        <p class="title">Snake</p>
+                        <p class="description">Игра написанная на чистом JavaScript</p>
+                        <p class="used"><i class="fab fa-js-square"></i></p>
+                    </div>
+                    <div class="item">
+                        <img src="img/snake.jpg" alt="img/snake.jpg">
+                        <p class="title">Snake</p>
+                        <p class="description">Игра написанная на чистом JavaScript</p>
+                        <p class="used"><i class="fab fa-js-square"></i></p>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="slide flex" data-anchor="slide2">
+                <div class="wrap">
+                    <h1>Slide 2.1</h1>
+                </div>
+            </div>
+
+            <div class="slide flex" data-anchor="slide3">
+                <h1>Slide 2.2</h1>
+            </div>
+            
+            <div class="slide flex" data-anchor="slide4">
+                <h1>Slide 2.3</h1>
+            </div>
+        </div>
+
+
+        <!-- Интересы -->
+        <div class="section" id="section5">
+            <h2>Мои интересы<span class="title-menu">Интересы</span></h2>
+            <h3><i class="fas fa-book"></i> Саморазвитие</h3>
+            <p>Саморазвитие занимает особую роль в моей жизни. 
+            Я стараюсь регулярно читать/слушать книги, работаю 
+            над личной эффективностью, привычками, таймменеджментом, 
+            психологией. Для кого-то это может показаться, наверное, 
+            скучным, но это важные составляющие моей жизни.</p>
+            <p>Последние книги которые я прочитал: "Sapiens", "Никогда не ешь в одиночку"</p>
+            <h3><i class="fas fa-futbol"></i> Спорт</h3>
+            <p>
+                Спорт с раннего детства сопровождает меня: тренажерный зал, бокс, футбол. 
+                Даже прыгал с парашютом. На первом курсе института я поставил себе 
+                цель - выступить на сцене в категории Men`s Physique. 
+                Больше года я готовился к этому. В итоге занял 4-е место в 
+                федерации UBPF. С тех пор приоритеты сильно поменялись 
+                и сейчас, увы, я лишь изредка посещаю тренажерный зал.
+            </p>
+        </div>
+
+        <div class="section" id="section6">
+            <img src="./img/taj.gif" alt="">
+            <p>Конец! Спасибо за то, что дошли до конца.
+                Буду рад обратной связи от вас <i class="far fa-smile"></i>
+            </p>
+        </div>
     </div>
-  </div>
-</div>
 
+    <div id="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href=""><i class="fas fa-phone-square"></i></a>
+            <a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-telegram-plane"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+    </div>
 
-<script type="text/javascript">
-$(function(){
-    $('.layer0').plaxmove({ratioH:0.005,ratioV:0.005})
-    $('.layer1').plaxmove({ratioH:0.01,ratioV:0.01})
-    $('.layer2').plaxmove({ratioH:0.03,ratioV:0.03})
-    $('.layer3').plaxmove({ratioH:0.05,ratioV:0.05})
-});
-</script>
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </body>
-</html>
 
+</html>
