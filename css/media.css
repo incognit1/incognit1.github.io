@@ -5,13 +5,34 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	#menu span{
+		display: none;
+		background: #000000;
+	}
 
+	.hamburger {
+		display: block;
+	}
+
+	#menu {
+		width: 60px;
+		left: 7px;
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
-	#menu {
-		display: none;
+
+
+
+
+	#logo {
+		left: 30px;
+	}
+
+	.section {
+		padding-left: 90px;
+		padding-right: 25px;
 	}
 }
 

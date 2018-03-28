@@ -138,7 +138,10 @@ p{
   display: block;
   position: fixed;
   top: 20px;
-  left: 64px;
+  left: 70px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 5px;
 
   span {
     color: $color3;
@@ -358,9 +361,9 @@ p{
 
 .hamburger{
   background:none;
-  position:absolute;
-  top:0;
-  right:0;
+  position:fixed;
+  top: 20px;
+  right: 5px;
   line-height:45px;
   padding:5px 15px 0px 15px;
   color:#999;
@@ -370,10 +373,11 @@ p{
   cursor:pointer;
   outline:none;
   z-index:10000000000000;
+  display: none;
 }
 .cross{
   background:none;
-  position:absolute;
+  position:fixed;
   top:0px;
   right:0;
   padding:7px 15px 0px 15px;
@@ -386,7 +390,7 @@ p{
   outline:none;
   z-index:10000000000000;
 }
-.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:fixed; text-align:center; font-size:12px;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}

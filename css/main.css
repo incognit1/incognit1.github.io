@@ -145,7 +145,10 @@ p {
   display: block;
   position: fixed;
   top: 20px;
-  left: 64px; }
+  left: 70px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 5px; }
   #logo span {
     color: #3f8bb9;
     font-size: 14px; }
@@ -303,9 +306,9 @@ p {
 
 .hamburger {
   background: none;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 20px;
+  right: 5px;
   line-height: 45px;
   padding: 5px 15px 0px 15px;
   color: #999;
@@ -314,11 +317,12 @@ p {
   font-weight: bold;
   cursor: pointer;
   outline: none;
-  z-index: 10000000000000; }
+  z-index: 10000000000000;
+  display: none; }
 
 .cross {
   background: none;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0;
   padding: 7px 15px 0px 15px;
@@ -337,7 +341,7 @@ p {
   font-size: 0.8em;
   width: 100%;
   background: #f1f1f1;
-  position: absolute;
+  position: fixed;
   text-align: center;
   font-size: 12px; }
 
