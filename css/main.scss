@@ -319,6 +319,10 @@ p{
   .description {
     padding: 5px 15px 0px 15px !important;
     margin: 8px 0 !important;
+
+    svg {
+      margin-right: 10px;
+    }
   }
   .demo a {
     font-size: 15px;
