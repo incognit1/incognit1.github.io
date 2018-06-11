@@ -1,0 +1,383 @@
+body{
+	font-family: "BebasNeue", sans-serif;
+	font-size: 14px;
+	min-width: 320px;
+}
+
+h1,h2,h3 {
+    font-family: BebasBold, Impact, sans-serif;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+    color: #545454;
+}
+
+p{
+    font-family: OpenSansRegular;
+    line-height: 25px;
+    font-size: 17px; 
+}
+
+button {
+    background: transparent;
+    font-family: BebasRegular, sans-serif;
+}
+
+.p0{
+	padding: 0;
+}
+
+/*BUTTONS*/
+.my_btn{
+	background-color: #e84545;
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+.btn_md{
+	padding: 10px 30px;
+}
+.btn_lg{
+	padding: 15px 50px;
+}
+.soc_btn_grey{
+	border: 1px solid #c6cacc;
+	color:#c6cacc;
+	background-color: transparent;
+	width: 36px;
+    height: 36px;
+    font-size: 16px;
+}
+
+/*HEADER*/
+header {
+    transition: 1s;
+    background-color: #65A8D7;
+    overflow: hidden;
+}
+
+.top-header {
+    height: 82px;
+    line-height: 82px;
+    background: #fff;
+    transition: 1.6s;
+}
+
+.search input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #E1E1E1;
+    outline: none;
+}
+
+header button {
+    background: transparent;
+    border:0px;
+}
+
+.search button {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.cart {
+    float: right;
+}
+.cart button{
+    width: 55px;
+    height: 55px;
+    position: relative;
+    top: 18px;
+}
+
+.cart button img {
+    position: absolute;
+    top: 0;
+    left: -5px;
+}
+
+button:focus{
+    outline: 0px;
+}
+
+.cart span {
+    color: #A1A1A1;
+    font-size: 30px;
+    font-family: 'Bebas Neue';
+}
+
+nav {
+    height: 37px;
+    line-height: 37px;
+    z-index: 999;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: #4CCFC1;
+    box-shadow: 1px 1px 1px rgb(57, 167, 155);
+}
+
+
+.navbar-brand>img {
+	height: 43px;
+}
+
+.menu{
+	list-style-type:none;
+	margin: 0;
+	padding: 0; 
+}
+.menu li{
+	display: inline-block;
+    padding: 0 26px;
+    line-height: 17px;
+}
+
+
+
+.menu li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: BebasBold, sans-serif;
+    font-size: 20px;
+}
+.menu li a:hover, .menu li a:focus{
+	text-decoration: none;
+	color: #d1fffa;
+}
+
+.logo{
+	padding-top: 22px;
+}
+
+/*Slider*/
+
+.slider_section {
+    background: url(../img/bg.png);
+    padding: 90px 267px 90px 90px;
+    color: #fff;
+}
+
+.item img {
+    float: left;
+    padding-left: 117px;
+    padding-top: 22px;
+}
+
+.slider_text {
+    padding: 0px 162px 0px 35px;
+}
+
+.slider_section h3 {
+    text-transform: uppercase;
+    font-family: BebasBold, Impact, sans-serif;
+    font-size: 61px;
+}
+
+.slider_section p{
+}
+
+.carousel-indicators {
+    top: 360px;
+}
+
+.slider_section button {
+    font-size: 28px;
+    border: 3px solid #fff;
+    border-radius: 7px;
+    padding: 0 20px;
+    margin: 13px 6px;
+}
+
+.left {
+        background: none !important;
+        left: -102px;
+}
+
+.left:before {
+    content: "";
+    width: 40px;
+    height: 104px;
+    position: absolute;
+    top: 38px;
+    left: 25px;
+    background: url(../img/sprite.png) no-repeat -110px 0px;
+}
+
+.right {
+        background: none !important;
+        right: -100px !important;
+}
+
+.right:before {
+    content: "";
+    width: 40px;
+    height: 104px;
+    position: absolute;
+    top: 38px;
+    right: 25px;
+    background: url(../img/sprite.png) no-repeat -174px 0px;
+}
+
+.img {
+    width: 180px;
+    height: 173px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.img img {
+    float: none;
+    padding-left: 0;
+    padding-top: 26px;
+    margin: 0 auto;
+    display: block;
+}
+
+.slider_content_section .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.slider_content_section{
+    padding: 0px 120px;
+}
+
+.slider_content_section h3 {
+    font-size: 27px;
+    font-family: BebasBold;
+    color: #afafaf;
+    padding-top: 26px;
+    margin-right: 10px;
+
+}
+
+.slider_content_section button {
+    font-family: BebasRegular, sans-serif;
+    border: none;
+    color: #fff;
+    background: #3CC395;
+    font-size: 19px;
+    padding: 2px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.b1+.b1{
+    border-left: 1px solid #E7E7E7;
+}
+
+/**/
+
+.title {
+    background: url(../img/bg.png);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.22) inset;
+}
+
+.title h2 {
+    text-align: left;
+    color: #fff;
+}
+
+.product {
+    padding-top: 18px;
+    width: 255px;
+    height: 255px;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    color: #AFAFAF;
+    margin-bottom: 46px;
+    margin-top: 40px;
+}
+
+.product:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #3CC395;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.product span, .product h3, footer span {
+    font-size: 27px;
+    font-family: BebasBold;
+}
+
+.product span {
+    position: absolute;
+    bottom: 13px;
+    left: 35px;
+}
+
+.product button {
+    position: absolute;
+    bottom: 17px;
+    left: 93px;
+}
+
+.product h3 {
+        position: absolute;
+    bottom: 50px;
+    left: 66px;
+}
+
+.product button {
+    font-size: 20px;
+    background: #3CC395;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 0px;
+    margin-left: 8px;
+}
+
+/**/
+
+footer {
+    background: #3CC3B5;
+    color: #fff;
+    padding-top: 45px;
+}
+
+footer a {
+    color: #fff;
+    line-height: 25px;
+    font-size: 15px;
+    font-family: OpenSansRegular, sans-serif;
+}
+
+footer a:hover{
+    color: #eadddd;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer ul {
+    padding: 10px 4px;
+}
+
+.copyright {
+    background: #2DA89B;
+    height: 46px;
+}
+
+.copyright p {
+    font-family: OpenSansRegular, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+}

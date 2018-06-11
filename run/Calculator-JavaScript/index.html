@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<section id="calculator">
+			<header>
+				<h2 class="title">Калькулятор</h2>
+				<button id="printBtn" class="button" disabled="" onclick="javascript: print();"><i class="fas fa-print"></i></button>
+
+				<output id="memory"></output>
+				<input type="text" id="pressed" value="" disabled="" />
+			</header>
+			<div class="container">
+				<button value="M" class="small">M</button>
+				<button value="C" class="small">C</button>
+				<button value="CLast" class="small">⌦</button>
+				<button value="/">÷</button>
+				<button value="7">7</button>
+				<button value="8">8</button>
+				<button value="9">9</button>
+				<button value="*">×</button>
+				<button value="4">4</button>
+				<button value="5">5</button>
+				<button value="6">6</button>
+				<button value="-">-</button>
+				<button value="1">1</button>
+				<button value="2">2</button>
+				<button value="3">3</button>
+				<button value="+">+</button>
+				<button class="wide" value="0">0</button>
+				<button value=".">.</button>
+				<button value="=" id="focus">=</button>
+			</div>
+		</section>
+		<section id="history">
+			<textarea id="output" autofocus="">История операций:</textarea>
+		</section>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@font-face {
+			font-family: "NotCourierSansRegular";
+			src: url("../fonts/NotCourierSansRegular/NotCourierSansRegular.eot");
+			src: url("../fonts/NotCourierSansRegular/NotCourierSansRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/NotCourierSansRegular/NotCourierSansRegular.woff") format("woff"),
+			url("../fonts/NotCourierSansRegular/NotCourierSansRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "NotCourierSansBold";
+			src: url("../fonts/NotCourierSansBold/NotCourierSansBold.eot");
+			src: url("../fonts/NotCourierSansBold/NotCourierSansBold.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/NotCourierSansBold/NotCourierSansBold.woff") format("woff"),
+			url("../fonts/NotCourierSansBold/NotCourierSansBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
