@@ -112,6 +112,10 @@
 	#section6 img {
 		width: 75%;
 	}
+
+	.desc-only {
+		display: none;
+	}
 }
 
 /* Extra Small Devices, Phones */
