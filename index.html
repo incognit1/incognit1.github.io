@@ -1,450 +1,547 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Лещенко Владислав. Портфолио</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage methods demo." />
+    <meta name="keywords" content="fullpage,jquery,methods,callbacks,demo" />
+    <meta name="Resource-type" content="Document" />
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" type="text/css" href="./css/media.css" >
-    <script src="./js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/media.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
     <script src="./js/jquery.fullpage.min.js"></script>
-        
+    <script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
-
-            function initialization() {
-                $('#myContainer').fullpage({
-                    sectionsColor: [,,,,,,'#111'],
-                    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', 'lastPage'],
-                    resize: false,
-                    animateAnchor: false,
-                    scrollOverflow: true,
-                    autoScrolling: true,
-                    slidesNavigation: true,
-                    responsive: 900,
-                    fitSection: false,
-                    menu: '#menu',
-                    navigation: true,
-                    continuousVertical: false,
-                    paddingTop: '20px',
-                    css3: true,
-                    onLeave: function (index, nextIndex, direction) {
-                        if (index === 1) {
-                            $('#section0').find('.title-menu').removeClass('open')
-                                .addClass('close');
-                        }
-
-                        else if (index ===2 ) {
-                            $('#section2').find('.title-menu').removeClass('open')
-                                .addClass('close');
-                        }
-                        else if (index ===3 ) {
-                            $('#section4').find('.title-menu').removeClass('open')
-                                .addClass('close');
-                        }
-                        else if (index === 4) {
-                            $('#section1').find('.title-menu').removeClass('open')
-                                .addClass('close');
-                        }
-                        else if (index ===5) {
-                            $('#section3').find('.title-menu').removeClass('open')
-                                .addClass('close');
-                        }
-                        else if (index === 6) {
-                            $('#section5').find('.title-menu').removeClass('open')
-                                .addClass('close');
-                        }
-                        console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " + direction);
-                    },
-                    afterLoad: function(anchorLink, index) {
-                        if (index === 1) {
-                            $('#section0').find('.title-menu').removeClass('close')
-                                .addClass('open');
-                        }
-
-                        else if (index ===2 ) {
-                            $('#section2').find('.title-menu').removeClass('close')
-                                .addClass('open');
-                        }
-                        else if (index ===3 ) {
-                            $('#section4').find('.title-menu').removeClass('close')
-                                .addClass('open');
-                        }
-                        else if (index === 4) {
-                            $('#section1').find('.title-menu').removeClass('close')
-                                .addClass('open');
-                        }
-                        else if (index ===5) {
-                            $('#section3').find('.title-menu').removeClass('close')
-                                .addClass('open');
-                        }
-                        else if (index === 6) {
-                            $('#section5').find('.title-menu').removeClass('close')
-                                .addClass('open');
-                        }
-
-                        // if(anchorLink === 'firstPage'){
-                        //     //moving the image
-                        //     $('#section0').find('.title-menu').delay(500).animate({
-                        //         left: '50% !important'
-                        //     }, 1500, 'easeOutExpo');
-                        //
-                        // }
-
-
-                        console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
-                    },
-                    afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-                        console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
-                    },
-                    onSlideLeave: function (anchorLink, index, slideIndex, direction) {
-                        console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
-                    },
-                    afterRender: function () {
-                        console.log("afterRender");
-                    },
-                    afterResize: function () {
-                        console.log("afterResize");
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', 'lastPage'],
+                sectionsColor: ['#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#111'],
+                scrollOverflow: true,
+                menu: '#menu',
+                paddingTop: '20px',
+                css3: true,
+                onLeave: function (index, nextIndex, direction) {
+                    if (index === 1) {
+                        $('#section0').find('.title-menu').removeClass('open')
+                            .addClass('close');
                     }
-                });
-            }
 
-            //fullPage.js initialization
-            initialization();
+                    else if (index === 2) {
+                        $('#section2').find('.title-menu').removeClass('open')
+                            .addClass('close');
+                    }
+                    else if (index === 3) {
+                        $('#section4').find('.title-menu').removeClass('open')
+                            .addClass('close');
+                    }
+                    else if (index === 4) {
+                        $('#section1').find('.title-menu').removeClass('open')
+                            .addClass('close');
+                    }
+                    else if (index === 5) {
+                        $('#section3').find('.title-menu').removeClass('open')
+                            .addClass('close');
+                    }
+                    else if (index === 6) {
+                        $('#section5').find('.title-menu').removeClass('open')
+                            .addClass('close');
+                    }
+                    console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " + direction);
+                },
+                afterLoad: function (anchorLink, index) {
+                    if (index === 1) {
+                        $('#section0').find('.title-menu').removeClass('close')
+                            .addClass('open');
+                    }
 
+                    else if (index === 2) {
+                        $('#section2').find('.title-menu').removeClass('close')
+                            .addClass('open');
+                    }
+                    else if (index === 3) {
+                        $('#section4').find('.title-menu').removeClass('close')
+                            .addClass('open');
+                    }
+                    else if (index === 4) {
+                        $('#section1').find('.title-menu').removeClass('close')
+                            .addClass('open');
+                    }
+                    else if (index === 5) {
+                        $('#section3').find('.title-menu').removeClass('close')
+                            .addClass('open');
+                    }
+                    else if (index === 6) {
+                        $('#section5').find('.title-menu').removeClass('close')
+                            .addClass('open');
+                    }
 
-            $('#moveSectionUp').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.moveSectionUp();
-            });
+                    if (anchorLink === 'firstPage') {
+                        //moving the image
+                        $('#section0').find('.title-menu').delay(500).animate({
+                            left: '50% !important'
+                        }, 1500, 'easeOutExpo');
 
-            $('#moveSectionDown').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.moveSectionDown();
-            });
-
-            $('#moveTo').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.moveTo(2, 3);
-            });
-
-            $('#silentMoveTo').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.silentMoveTo(2);
-            });
-
-            $('#silentMoveToSlide').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.silentMoveTo(2, 3);
-            });
-
-            $('#moveSlideRight').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.moveSlideRight();
-            });
-
-            $('#moveSlideLeft').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.moveSlideLeft();
-            });
-
-            $('#setAutoScrollingFalse').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setAutoScrolling(false);
-            });
-
-            $('#setAutoScrollingTrue').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setAutoScrolling(true);
-            });
-
-            $('#setAllowScrollingFalse').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setAllowScrolling(false);
-            });
-
-            $('#setAllowScrollingTrue').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setAllowScrolling(true);
-            });
-
-            $('#setKeyboardScrollingFalse').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setKeyboardScrolling(false);
-            });
-
-            $('#setKeyboardScrollingTrue').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setKeyboardScrolling(true);
-            });
-
-            $('#setScrollingSpeed1500').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setScrollingSpeed(2500);
-            });
-
-            $('#setScrollingSpeed700').click(function (e) {
-                e.preventDefault();
-                $.fn.fullpage.setScrollingSpeed(700);
-            });
+                    }
 
 
-            $('#setLockAnchorsTrue').click(function (e) {
-                e.preventDefault;
-                $.fn.fullpage.setLockAnchors(true);
-            });
-
-            $('#setLockAnchorsFalse').click(function (e) {
-                e.preventDefault;
-                $.fn.fullpage.setLockAnchors(false);
+                    console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
+                },
             });
         });
-
-
     </script>
-    
 </head>
 
 <body>
+
     <div id="logo">
         <img src="./img/iam.jpg" alt="">
         <h1>Лещенко Владислав</h1>
         <span>Фронтенд разработчик</span>
     </div>
+
     <ul id="menu">
+        <li class="mobile-btn">
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="cross">
+                <i class="fas fa-times"></i>
+            </button>
+        </li>
+
         <li data-menuanchor="firstPage">
-            <a href="#firstPage"><i class="fas fa-home"></i> <span>Обо мне</span></a>
+            <a href="#firstPage">
+                <i class="fas fa-home"></i>
+                <span>Обо мне</span>
+            </a>
         </li>
         <li data-menuanchor="secondPage">
-            <a href="#secondPage"><i class="fas fa-code"></i> <span>Навыки</span></a>
+            <a href="#secondPage">
+                <i class="fas fa-code"></i>
+                <span>Навыки</span>
+            </a>
         </li>
         <li data-menuanchor="3rdPage">
-            <a href="#3rdPage"><i class="fas fa-desktop"></i> <span>Опыт работы</span></a>
+            <a href="#3rdPage">
+                <i class="fas fa-desktop"></i>
+                <span>Опыт работы</span>
+            </a>
         </li>
         <li data-menuanchor="4thpage">
-            <a href="#4thpage"><i class="fas fa-university"></i> <span>Образование</span></a>
+            <a href="#4thpage">
+                <i class="fas fa-university"></i>
+                <span>Образование</span>
+            </a>
         </li>
 
         <li data-menuanchor="5thpage">
-            <a href="#5thpage"><i class="fas fa-suitcase"></i> <span>Портфолио</span></a>
+            <a href="#5thpage">
+                <i class="fas fa-suitcase"></i>
+                <span>Портфолио</span>
+            </a>
         </li>
 
         <li data-menuanchor="6thpage">
-            <a href="#6thpage"><i class="fas fa-book"></i> <span>Интересы</span></a>
+            <a href="#6thpage">
+                <i class="fas fa-book"></i>
+                <span>Интересы</span>
+            </a>
         </li>
+        <li data-menuanchor="lastPage">
+            <a href="#lastPage">
+                <i class="fas fa-phone"></i>
+                <span>Контакты</span>
+            </a>
+        </li>
+
     </ul>
 
-    <button class="hamburger">&#9776;</button>
-    <button class="cross">&#735;</button>
-    <div class="menu">
-        <ul>
-            <a href="#firstPage"><li>Обо мне</li></a>
-            <a href="#secondPage"><li>Навыки</li></a>
-            <a href="#3rdPage"><li>Опыт работы</li></a>
-            <a href="#4thpage"><li>Образование</li></a>
-            <a href="#5thpage"><li>Портфолио</li></a>
-            <a href="#6thpage"><li>Интересы</li></a>
-        </ul>
-    </div>
-
-    <div id="myContainer">
+    <div id="fullpage">
         <!-- Обо мне -->
         <div class="section" id="section0">
-            <h2>Добро пожаловать <i class="fas fa-hand-paper"></i><span class="title-menu">Обо мне</span></h2>
-            <p>
-                Меня зовут Лещенко Владислав. Я студент Киевского политехнического института имени Игоря Сикорского, где изучаю компьютерные науки. Также у меня есть опыт в веб-разработке!
-            </p>
+            <div class="wrapper">
+                <div class="title-block">
+                    <h2>Добро пожаловать
+                        <i class="fas fa-hand-paper"></i>
+                    </h2>
+                    <span class="title-menu">Обо мне</span>
+                </div>
+                <p>
+                    Меня зовут Лещенко Владислав. Я студент Киевского политехнического института имени Игоря Сикорского, где изучаю компьютерные
+                    науки. Также у меня есть опыт в веб-разработке!
+                </p>
+            </div>
         </div>
-        
+
         <!-- Навыки -->
         <div class="section" id="section2">
-            <h2><i class="fas fa-code"></i> Профессиональные навыки<span class="title-menu">Навыки</span></h2>
-            
-            <div class="progress-wrapper">
-                <span>HTML/CSS</span>
-                <div class="progress">
-                    <div class="determinate" style="width:95%"></div>
-                    <span>95%</span>
+            <div class="wrapper">
+                <div class="title-block">
+                    <h2>
+                        <i class="fas fa-code"></i> Профессиональные навыки</h2>
+                    <span class="title-menu">Навыки</span>
                 </div>
-                <span>JavaScript</span>
-                <div class="progress">
-                    <div class="determinate" style="width:90%"></div>
-                    <span>90%</span>
+
+
+                <div class="progress-wrapper">
+                    <span>HTML/CSS</span>
+                    <div class="progress">
+                        <div class="determinate" style="width:95%"></div>
+                        <span>95%</span>
+                    </div>
+                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="determinate" style="width:90%"></div>
+                        <span>90%</span>
+                    </div>
+                    <span>Angular 2+</span>
+                    <div class="progress">
+                        <div class="determinate" style="width:60%"></div>
+                        <span>60%</span>
+                    </div>
                 </div>
-                <span>Angular 2+</span>
-                <div class="progress">
-                    <div class="determinate" style="width:60%"></div>
-                    <span>60%</span>
+
+                <div class="skills">
+                    <span>ES6</span>
+                    <span>Node.JS</span>
+                    <span>npm</span>
+                    <span>Bootstrap</span>
+                    <span>SASS</span>
+                    <span>Git</span>
+                    <span>Photoshop</span>
+                    <span>BEM</span>
                 </div>
             </div>
-
-            <div class="skills">
-                <span>ES6</span>
-                <span>Node.JS</span>
-                <span>npm</span>
-                <span>Bootstrap</span>
-                <span>SASS</span>
-                <span>Git</span>
-                <span>Photoshop</span>
-                <span>BEM</span>
-            </div>
-
         </div>
 
         <!-- Опыт работы -->
         <div class="section" id="section4">
-            <h2><i class="fas fa-desktop"></i> Опыт работы <span class="title-menu">Опыт</span></h2>
-            <p>
-                Лето-осень 2017 – удаленная работа. Верстка шаблонов на WordPress.
-            </p>
-            <p>
-                Весна 2017 – удаленная работа. Моей задачей было преобразовывать сайты посредством регулярных выражений с использованием системы контроля версий.
-            </p>
-            <p>
-                2016 – верстка сайтов одногруппникам за деньги :)
-            </p>
-            <p>
-                2015-2016 – создание собственного интернет-магазина доставки цветов по Киеву Akito, где я был директором, программистом, консультантом, курьером и даже флористом.
-            </p>
+            <div class="wrapper">
+                <div class="title-block">
+                    <h2>
+                        <i class="fas fa-desktop"></i> Опыт работы </h2>
+                    <span class="title-menu">Опыт</span>
+                </div>
+
+                <p>
+                    Лето-осень 2017 – удаленная работа. Верстка шаблонов на WordPress.
+                </p>
+                <p>
+                    Весна 2017 – удаленная работа. Моей задачей было преобразовывать сайты посредством регулярных выражений с использованием
+                    системы контроля версий.
+                </p>
+                <p>
+                    2016 – верстка сайтов одногруппникам за деньги :)
+                </p>
+                <p>
+                    2015-2016 – создание собственного интернет-магазина доставки цветов по Киеву Akito, где я был директором, программистом,
+                    консультантом, курьером и даже флористом.
+                </p>
+            </div>
         </div>
 
         <!-- Образование -->
         <div class="section" id="section1">
-                <h2><i class="fas fa-university"></i> Образование<span class="title-menu">Образование</span></h2>
-                
-                <p>2015-2019 – учусь в Киевском политехническом институте им. Игоря Сикорского на третьем курсе. Факультет: Теплоэнергетический. Специальность: компьютерные науки. Форма обучения: очная.</p>
-                <p>2017 – закончил курсы JavaScript Advanced в CyberBionic Systematics. Результаты тестирования на TestProvider: 975 баллов из 1000. Номер Сертификата: TP94638303. </p>
+            <div class="wrapper">
+                <div class="title-block">
+                    <h2>
+                        <i class="fas fa-university"></i> Образование</h2>
+                    <span class="title-menu">О б р а з о в а н и е</span>
+                </div>
+
+
+                <p>2015-2019 – учусь в Киевском политехническом институте им. Игоря Сикорского на третьем курсе. Факультет:
+                    Теплоэнергетический. Специальность: компьютерные науки. Форма обучения: очная.</p>
+                <p>2017 – закончил курсы JavaScript Advanced в CyberBionic Systematics. Результаты тестирования на TestProvider:
+                    975 баллов из 1000. Номер Сертификата: TP94638303. </p>
             </div>
+        </div>
 
         <!-- Портфолио -->
         <div class="section" id="section3">
-            <div class="slide" data-anchor="slide1">
-                <h2><i class="fas fa-suitcase"></i> Портфолио<span class="title-menu">Портфолио</span></h2>
-
-                <div class="flex">
-                    <div class="item">
-                        <img src="img/snake.jpg" alt="img/snake.jpg">
-                        <p class="title">Snake</i></p>
-                        <p class="description">Игра написанная на чистом JavaScript</p>
-                        <span class="used"><i class="fab fa-js-square"></i> </span>
-                        <span class="demo">
-                            <a href=""><i class="fas fa-play"></i></a>
-                            <a href=""><i class="fab fa-github"></i></a>
-                        </span>
-                    </div>
-
-                    <div class="item">
-                        <img src="img/snake.jpg" alt="img/snake.jpg">
-                        <p class="title">Snake</i></p>
-                        <p class="description">Игра написанная на чистом JavaScript</p>
-                        <span class="used"><i class="fab fa-js-square"></i> </span>
-                        <span class="demo">
-                            <a href=""><i class="fas fa-play"></i></a>
-                            <a href=""><i class="fab fa-github"></i></a>
-                        </span>
-                    </div>
-
-                    <div class="item">
-                        <img src="img/snake.jpg" alt="img/snake.jpg">
-                        <p class="title">Snake</i></p>
-                        <p class="description">Игра написанная на чистом JavaScript</p>
-                        <span class="used"><i class="fab fa-js-square"></i> </span>
-                        <span class="demo">
-                            <a href=""><i class="fas fa-play"></i></a>
-                            <a href=""><i class="fab fa-github"></i></a>
-                        </span>
-                    </div>
-
-                    <div class="item">
-                        <img src="img/snake.jpg" alt="img/snake.jpg">
-                        <p class="title">Snake</i></p>
-                        <p class="description">Игра написанная на чистом JavaScript</p>
-                        <span class="used"><i class="fab fa-js-square"></i> </span>
-                        <span class="demo">
-                            <a href=""><i class="fas fa-play"></i></a>
-                            <a href=""><i class="fab fa-github"></i></a>
-                        </span>
-                    </div>
+            <div class="wrapper">
+                <div class="title-block">
+                    <h2>
+                        <i class="fas fa-suitcase"></i> Портфолио</h2>
+                    <span class="title-menu">Портфолио</span>
                 </div>
-                    
-            </div>
-            <div class="slide flex" data-anchor="slide2">
-                <div class="wrap">
-                    <h1>Slide 2.1</h1>
-                </div>
-            </div>
 
-            <div class="slide flex" data-anchor="slide3">
-                <h1>Slide 2.2</h1>
-            </div>
-            
-            <div class="slide flex" data-anchor="slide4">
-                <h1>Slide 2.3</h1>
+                <div class="portfolio-block">
+
+                    <div class="item">
+                        <img src="img/booster.jpg" alt="Booster">
+                        <p class="title">Booster</p>
+                        <p class="description">Cистема управления проектами. Клиентская часть реализована на Angular, а серверная на Node.js с использованием
+                            Deployd и MongoDB в качестве базы данных.</p>
+                        <div class="portfolio-more">
+                            <span class="used">
+                                <i class="fab fa-angular"></i>
+                                <i class="fab fa-node-js"></i>
+                            </span>
+                            <span class="demo">
+                                <a target="_blank"  href="https://youtu.be/qEynGcJA2kY">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a target="_blank" href="https://github.com/incognit1/Booster">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/snake.jpg" alt="img/snake.jpg">
+                        <p class="title">Snake</p>
+                        <p class="description">Классическая змейка написанная на чистом JavaScript.</p>
+                        <div class="portfolio-more">
+                            <span class="used">
+                                <i class="fab fa-js-square"></i>
+                            </span>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="https://github.com/incognit1/Snake" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <img src="img/action.jpg" alt="Action Cards">
+                        <p class="title">Action Cards</p>
+                        <p class="description">Красивая верстка одностраничного шаблона на Bootstrap.</p>
+                        <div class="portfolio-more">
+                            <span class="used">
+                                <i class="fab fa-js-square"></i>
+                            </span>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/incognit.jpg" alt="Web Blog">
+                        <p class="title">WebBlog</p>
+                        <p class="description">Верстка многостраничного шаблона.</p>
+                        <div class="portfolio-more">
+                            <span class="used">
+                                <i class="fab fa-js-square"></i>
+                            </span>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/js.jpg" alt="">
+                        <p class="title"> Работы на JavaScript
+                        </p>
+
+                        <div class="items">
+                            <p class="description">Красивый список задач</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+
+                            <p class="description">Динамические гистограммы</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                            <p class="description">Калькулятор</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+
+                            </span>
+                            <p class="description">Методы шифрования</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="item">
+                        <img src="img/v.jpg" alt="img/snake.jpg">
+                        <p class="title">
+                            Верстки шаблонов
+                        </p>
+                        <p class="description">
+                            Некоторые из моих более давних работ:
+                        </p>
+                        <div class="items">
+                            <p class="description">ActiveBox</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+
+                            <p class="description">Aditii</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+
+                            <p class="description">AirDucts
+                                <i class="fab fa-wordpress"></i>
+                            </p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+
+                            <p class="description">WebFolio</p>
+                            <span class="demo">
+                                <a href="">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <hr>
+                </div>
+
             </div>
         </div>
 
 
         <!-- Интересы -->
         <div class="section" id="section5">
-            <h2>Мои интересы<span class="title-menu">Интересы</span></h2>
-            <h3><i class="fas fa-book"></i> Саморазвитие</h3>
-            <p>Саморазвитие занимает особую роль в моей жизни. 
-            Я стараюсь регулярно читать/слушать книги, работаю 
-            над личной эффективностью, привычками, таймменеджментом, 
-            психологией. Для кого-то это может показаться, наверное, 
-            скучным, но это важные составляющие моей жизни.</p>
-            <p>Последние книги которые я прочитал: "Sapiens", "Никогда не ешь в одиночку"</p>
-            <h3><i class="fas fa-futbol"></i> Спорт</h3>
-            <p>
-                Спорт с раннего детства сопровождает меня: тренажерный зал, бокс, футбол. 
-                Даже прыгал с парашютом. На первом курсе института я поставил себе 
-                цель - выступить на сцене в категории Men`s Physique. 
-                Больше года я готовился к этому. В итоге занял 4-е место в 
-                федерации UBPF. С тех пор приоритеты сильно поменялись 
-                и сейчас, увы, я лишь изредка посещаю тренажерный зал.
-            </p>
+            <div class="wrapper">
+                <div class="title-block">
+                    <h2>Мои интересы</h2>
+                    <span class="title-menu">Интересы</span>
+                </div>
+                <h3>
+                    <i class="fas fa-book"></i> Саморазвитие</h3>
+                <p>Саморазвитие занимает особую роль в моей жизни. Я стараюсь регулярно читать/слушать книги, работаю над личной
+                    эффективностью, привычками, таймменеджментом, психологией. Это важные составляющие моей жизни.</p>
+                <p>Из последних книг которые я прочитал: "Angular для профессионалов" Адам Фримен, "Sapiens: Краткая история человечества" Юваль Харари, "Никогда не ешь в одиночку" Кейт Ферраци</p>
+                <h3>
+                    <i class="fas fa-futbol"></i> Спорт</h3>
+                <p>
+                    Спорт с раннего детства сопровождает меня: тренажерный зал, бокс, футбол. Даже прыгал с парашютом.
+                </p>
+            </div>
         </div>
 
+        <!-- Контакты -->
         <div class="section" id="section6">
-            <img src="./img/taj.gif" alt="">
-            <p>Конец! Спасибо за то, что дошли до конца.
-                Буду рад обратной связи от вас <i class="far fa-smile"></i>
-            </p>
-        </div>
-    </div>
+            <img src="img/taj.gif" alt="">
 
-    <div id="social">
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fas fa-envelope"></i></a>
-            <a href=""><i class="fas fa-phone-square"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-telegram-plane"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <p>Конец! Спасибо за то, что дошли до конца. Буду рад обратной связи от вас!
+                <i class="far fa-smile"></i>
+            </p>
+            <div id="social">
+                <a  target="_blank" href="https://www.instagram.com/incognit_1/">
+                    <i class="fab fa-instagram"></i> https://instagram.com/incognit_1
+                </a>
+                <a  target="_blank" href="mailto:misire351@gmail.com">
+                    <i class="fas fa-envelope"></i> misire351@gmail.com
+                </a>
+                <a target="_blank" href="tel:380687771953">
+                    <i class="fas fa-phone-square"></i> +380687771953
+                </a>
+                <a target="_blank" href="https://github.com/incognit1">
+                    <i class="fab fa-github"></i> https://github.com/incognit1
+                </a>
+                <a target="_blank" href="https://telegram.me/incognit_1">
+                    <i class="fab fa-telegram-plane"></i> https://telegram.me/incognit_1
+                </a>
+            </div>
+        </div>
     </div>
 
     <script>
-        $( document ).ready(function() {
+        $(document).ready(function () {
+            $(".cross").hide();
+            $(".menu").hide();
 
-            $( ".cross" ).hide();
-            $( ".menu" ).hide();
-            $( ".hamburger" ).click(function() {
-                $( ".menu" ).slideToggle( "slow", function() {
-                    $( ".hamburger" ).hide();
-                    $( ".cross" ).show();
+            $(".hamburger").click(function () {
+                $("#menu").addClass("opened-menu");
+                $("#menu span").fadeToggle("fast", function () {
+                    $(".hamburger").hide();
+                    $(".cross").show();
                 });
+
             });
 
-            $( ".cross" ).click(function() {
-                $( ".menu" ).slideToggle( "slow", function() {
-                    $( ".cross" ).hide();
-                    $( ".hamburger" ).show();
+            $(".cross").click(function () {
+
+                $("#menu span").fadeToggle("fast", function () {
+                    $("#menu").removeClass("opened-menu");
+                    $(".cross").hide();
+                    $(".hamburger").show();
+
                 });
             });
 
         });
     </script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-</body>
 
+</body>
 </html>

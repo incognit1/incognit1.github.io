@@ -1,11 +1,10 @@
 /*Reset*/
 
+
 /*-------------------------------*/
 $color1: #444;
 $color2: #a0a0a0;
 $color3: #3f8bb9;
-
-@import 'reset';
 
 body{
   font-family: Arial;
@@ -17,6 +16,15 @@ body{
   margin-right: auto;
   width: 960px;
   position: relative;
+  background: #2EBE21;
+}
+
+.wrapper {
+  padding-right: 10%;
+}
+
+.section  {
+  padding-left: 20%;
 }
 
 h1, h2, h3, h4, p {
@@ -29,7 +37,8 @@ h1{
 
 h2{
   font-size: 40px;
-  padding: 35px 0 50px 0px;
+  margin: 10px 0 50px 0px;
+  display: inline-block;
   position: relative;
 }
 
@@ -43,7 +52,14 @@ p{
   text-align: left;
 }
 
-#section0 p, #section6, h2, h3, .item p, #section6 p{
+#section0 p, #section6, h2, h3, #section6 p{
+  text-align: center;
+}
+//
+
+
+.title-block {
+  position: relative;
   text-align: center;
 }
 
@@ -51,7 +67,7 @@ p{
 
 #menu li a,
 #menu li.active a{
-  padding: 9px 18px;
+  padding: 9px 12px;
   display:block;
 }
 #menu li.active a{
@@ -70,6 +86,10 @@ p{
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 
+  & .mobile-btn {
+    display: none;
+  }
+
   & li {
     display: inline-block;
     margin: 10px;
@@ -83,8 +103,8 @@ p{
     color: $color1;
   }
 
-  & li.active {
-    background: none !important;
+  & 	li.active {
+    background: #eaeaea;
   }
   & li.active a {
     color: #000 !important;
@@ -114,23 +134,55 @@ p{
 
 }
 
+.opened-menu .active {
+  background: #fff !important;
 
-/* Overwriting styles for control arrows for slides
-* --------------------------------------- */
-.fp-controlArrow.fp-prev {
-  left: 50px;
-}
-.fp-controlArrow.fp-next{
-  right: 50px;
-}
-
-
-
-.section  {
-  padding-left: 20%;
-  padding-right: 10%;
+  & span {
+    position: relative;
+    top: -4px;
+  }
 }
 
+.opened-menu {
+  width: 175px !important;
+
+  &.cross {
+    display: block;
+    text-align: center;
+  }
+
+  & li {
+    margin: 12px 0 !important;
+    border-radius: 5px !important;
+    text-align: left !important;
+    padding: 0 7px !important;
+    border: 1px solid #f3e7e7 !important;
+    background: #eaeaea !important;
+  }
+
+
+
+    & li a svg {
+      margin-right: 5px !important;
+    }
+  }
+
+
+//
+//
+///* Overwriting styles for control arrows for slides
+//* --------------------------------------- */
+//.fp-controlArrow.fp-prev {
+//  left: 50px;
+//}
+//.fp-controlArrow.fp-next{
+//  right: 50px;
+//}
+//
+//
+//
+
+//
 #logo {
   height: auto;
   z-index: 70;
@@ -138,10 +190,11 @@ p{
   display: block;
   position: fixed;
   top: 20px;
-  left: 70px;
-  background: #fff;
-  padding: 4px;
-  border-radius: 5px;
+  left: 60px;
+  background: #eaeaea;
+  padding: 8px;
+  border-radius: 50px 50px 50px 0px;
+  border: 2px solid #fff;
 
   span {
     color: $color3;
@@ -152,7 +205,7 @@ p{
     width: 50px;
     height: auto;
     border-radius: 100%;
-    border: 2px solid #FFF;
+    border: 2px solid #eaeaea;
     float: left;
     margin-right: 15px;
   }
@@ -160,38 +213,42 @@ p{
   h1 {
     color: #333;
     letter-spacing: 1px;
-    margin-top: 10px;
     font-size: 16px;
+    font-weight: normal;
+    margin: 8px 0 2px 0;
   }
 }
-
-
+//
+//
 #social {
   height: auto;
   z-index: 70;
   width: auto;
   display: block;
-  position: fixed;
   bottom: 40px;
   right: 40px;
   font-size: 30px;
 
   a {
     color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
-
+//
 .title-menu {
   position: absolute;
-  top: 50%;
-  font-size: 140px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -10%;
+  font-size: 70px;
+  left: 0%;
   text-transform: uppercase;
-  font-family: Impact;
-  letter-spacing: 8px;
+  font-family: Impact, Arial, Tahoma, sans-serif;
+  letter-spacing: 5px;
   opacity: 0;
   width: 100%;
+  word-wrap: break-word;
 }
 
 /*Skills section*/
@@ -251,21 +308,44 @@ p{
 
 
 /*portfolio*/
+
+.items {
+  display: grid;
+  grid-template-columns: 3fr auto;
+  align-items: center;
+  margin: 0 0 10px 0;
+  padding-right: 14px;
+
+  .description {
+    padding: 5px 15px 0px 15px !important;
+    margin: 8px 0 !important;
+  }
+  .demo a {
+    font-size: 15px;
+  }
+}
+
 .item {
-  margin-top: 20px;
   border: 2px solid #ededed;
-  flex-grow: 1;
+  display: grid;
+  grid-gap: 0px;
+  position: relative;
+  grid-auto-rows: max-content max-content max-content auto;
 
   .title {
     background: #ededed;
-    margin: -4px 0px 0px 0px;
-    padding: 5px;
-    text-transform: uppercase;
+    padding: 7px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
   }
+
 
   .description {
     font-size: 15px;
     padding: 5px 5px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin: 10px 0;
   }
 
   img {
@@ -274,14 +354,21 @@ p{
   }
 
   & + .item {
-    margin-left: 25px;
+    //margin-left: 25px;
   }
 }
 
 .flex {
-  display: flex;
-  flex-direction: row;
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: wrap;
   position: relative;
+}
+
+.portfolio-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 36px 36px;
 }
 
 .fp-controlArrow {
@@ -303,14 +390,20 @@ p{
   margin:  0 3px;
 }
 
+.portfolio-more {
+  align-self: end;
+  padding: 7px;
+}
+
 .demo {
   float: right;
 
   a{
     color: $color3;
+    text-decoration: none;
   }
 }
- 
+
 /*portfolio end*/
 
 /*hobby*/
@@ -324,27 +417,28 @@ p{
 }
 
 
+
 @keyframes open {
   from {
     opacity: 0;
-    transform: scale(1.7) translate(-29%, -50%);
+    transform: scale(1.9) translate(-29%, -50%);
   }
 
   to {
     opacity: 0.14;
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-0%, -0%);
   }
 }
 
 @keyframes close {
   from {
     opacity: 0.1;
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-0%, -0%);
   }
 
   to {
     opacity: 0;
-    transform: scale(3) translate(-29%, -50%);
+    transform: scale(2.6) translate(-29%, -50%);
   }
 }
 
@@ -360,41 +454,22 @@ p{
 
 
 .hamburger{
-  background:none;
-  position:fixed;
-  top: 20px;
-  right: 5px;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  color:#999;
-  border:0;
-  font-size:1.4em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
+  background: none;
+  border: 0;
+  font-size: 17px;
+  cursor: pointer;
+  outline: none;
   display: none;
+  padding: 8px 10px;
+  margin: 0 auto;
 }
 .cross{
-  background:none;
-  position:fixed;
-  top:0px;
-  right:0;
-  padding:7px 15px 0px 15px;
-  color:#999;
-  border:0;
-  font-size:3em;
-  line-height:65px;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
+  background: none;
+  border: 0;
+  font-size: 17px;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  padding: 8px 10px;
+  margin: 0 auto;
 }
-.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:fixed; text-align:center; font-size:12px;}
-.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
-.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
-.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
-.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
-.menu ul li a:hover {  color: #666; text-decoration:none;}
-.menu a{text-decoration:none; color:#666;}
-.menu a:hover{text-decoration:none; color:#666;}
