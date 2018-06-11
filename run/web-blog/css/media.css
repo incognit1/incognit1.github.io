@@ -1,0 +1,135 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.header_menu {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
+
+.search_header {
+	display: none;
+}
+
+.main_menu ul {
+		display: none;
+		background: #f2f2f2;
+		margin-top: 10px;
+		padding: 0;
+		background: #f4f4f4;
+	}
+
+	.main_menu ul li {
+		position: relative;
+		width: 100%;
+		float: right;
+		padding: 0;
+		display: block;
+	}
+
+	.main_menu ul li a {
+		border-bottom: 1px solid rgba(175, 168, 246, 0.1);
+	}
+
+	.main_menu li {
+		display: block;
+	}
+
+	.main_menu a {
+		padding: 10px 20px;
+		color: #828282;
+	}
+
+	.main_menu a:hover {
+		background: #E7E7E7;
+	}
+
+	.main_menu .sub_menu {
+		position: relative;
+		float: right;
+		width: 100%;
+		display: block !important;
+		box-shadow: none;
+		background: none;
+		margin: 0;
+		padding: 0;
+		padding-left: 30px;
+	}
+
+	.main_menu .sub_menu li {
+		width: 100%;
+		border: 0;
+		padding: 0;
+	} 
+
+	.main_menu .sub_menu li a {
+		color: #828282;
+	}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.header_topline {
+		display: none;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.headhesive--stick {
+		display: none;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	
+	.toggle-mnu, #mobile-menu, html.mm-blocking #mm-blocker {
+		display: none;
+		opacity: 0 !important;
+	}
+ 
+	html.mm-opening .mm-slideout {
+		transform: translate(0px, 0px);
+	}
+
+	.main_menu ul {
+		display: block !important;
+	}
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

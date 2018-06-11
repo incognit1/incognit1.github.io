@@ -1,0 +1,278 @@
+body{
+	font-family: "RalewayRegular", sans-serif;
+	font-size: 14px;
+	min-width: 320px;
+    overflow-x: hidden;
+}
+.p0{
+	padding: 0;
+}
+/*BUTTONS*/
+.my_btn{
+	background-color: #e84545;
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+.btn_md{
+	padding: 10px 30px;
+}
+.btn_lg{
+	padding: 15px 50px;
+}
+.soc_btn_grey{
+	border: 1px solid #c6cacc;
+	color:#c6cacc;
+	background-color: transparent;
+	width: 36px;
+    height: 36px;
+    font-size: 16px;
+}
+
+/*HEADER*/
+header{
+	height: 670px;
+	background-image: url('../img/banner.jpg');
+	-webkit-background-size:cover;
+	background-size: cover;
+	transition: 1s;
+}
+nav{
+	height: 94px;
+	line-height: 94px;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+}
+
+.menu{
+	list-style-type:none;
+	margin: 0;
+	padding: 0; 
+}
+.menu li{
+	display: inline-block;
+	padding: 0 28px;
+}
+.menu li a{
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'RalewayBold' , sans-serif;
+
+}
+.menu li a:hover, .menu li a:focus{
+	text-decoration: none;
+	color: #e1e1e1;
+}
+.top_line{
+	height: 1px;
+    background-color: #515369;
+}
+.logo{
+	padding-top: 35px;
+}
+.title_block{
+	color: #fff;
+	text-align: center;
+	margin-top: 240px;
+	transition: 1s;
+
+}
+
+.title_block h1 {
+    font-size: 50px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+	transition: 1s;
+}
+
+.title_block p{
+	font-size: 18px;
+	margin-bottom: 50px;
+}
+/*PARAMS SECTION*/
+.param_s{
+	padding:95px 0;
+}
+.params_block{
+	text-align: center;
+	margin-bottom: 50px;
+	transition: 1s;
+}
+
+.params_block i{
+	font-size: 70px;
+	color: #e84545;
+}
+
+.params_block h3, .download_s h3{
+	text-transform: uppercase;
+	font-family: 'RalewayBold' , sans-serif;
+	font-size: 18px;
+}
+.params_block p{
+	font-size: 14px;
+}
+
+.params_block:hover i{
+	animation: circling 2s ease;
+		transition: 1s;
+}
+
+/*WORKS SECTION*/
+.work_block{
+	position: relative;
+}
+.image_wrap{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(232, 69, 69, .7);
+	opacity: 0;
+	display: flex;
+	transition:1s;
+}
+
+.work_block:hover .image_wrap{
+	opacity: 1;
+}
+.work_descr{
+	color: #fff;
+	text-align: center;
+	margin: auto;
+}
+.work_descr h4{
+	text-transform: uppercase;
+}
+/*TEAM SECTION*/
+.team_s{
+	padding: 100px 0;
+	color: #6c7279;
+}
+.team_item h4{
+	font-family: 'RalewayBold' , sans-serif;
+	color: #000;
+}
+.team_item > span{
+	text-transform: uppercase;
+	color: #e84545;
+	font-size: 14px;
+}
+.team_item p{
+	font-size: 14px;
+	padding: 10px 0;
+}
+
+.team_item{
+	padding-bottom: 20px;
+}
+    
+
+.download_s{
+    padding-bottom: 90px;
+}
+
+.download_s h3 {
+	font-size: 12px;
+	padding-bottom: 20px;
+    margin-top: 12px;
+}
+
+.download_s h2, .download_s h3, footer h4 {
+	text-align: center;
+}
+
+.btn-danger {
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 14px 87px;
+    background: #E84545;
+    border: none;
+}
+
+footer {
+	background: #3A3E64;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+footer p {
+	color: #9092A7;
+	text-align: center;
+}
+
+.main-footer {
+        padding: 70px 0 87px 0;
+}
+
+.sub-footer{
+	background: #313454;
+    padding: 28px 0;
+    line-height: 9px;
+}
+
+.soc_btn_white {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    margin-right: 4px;
+
+}
+
+.soc_btn_white:hover, .soc_btn_grey:hover  {
+	animation: social 1s ease;
+	border-radius: 100%;
+}
+
+.footer-btn {
+    margin: 0 auto;
+	width: 128px;
+}
+
+footer h4 {
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+footer span {
+	color:#fff;
+}
+
+footer span i {
+	color: #E84545;
+	font-size: 13px !important; 
+}
+
+@keyframes circling {
+	from{
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes social {
+	from{
+		transform: rotate(0deg);
+		border-radius: 0px;
+	}
+
+	to {
+		transform: rotate(360deg);
+		border-radius: 100%;
+	}
+}

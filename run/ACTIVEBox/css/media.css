@@ -1,0 +1,187 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	footer .col-md-4>div {
+		padding: 15px 0;
+	}
+
+	.main-footer {
+    padding: 40px 0 40px 0;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+		header {
+	 		padding: 0 5px;
+	 		height: 440px;
+	 		transition: 1s;
+		}
+
+		.title_block h1 {
+		    font-size: 31px;
+		    transition: 1s;
+		}
+		
+		.title_block {
+		    color: #fff;
+		    text-align: center;
+		    margin-top: 140px;
+		}
+
+		.param_s {
+ 		   padding: 40px 0;
+		}
+
+		.team_s {
+   			 padding: 40px 0;
+		}
+		.img-responsive {
+			margin: 0 auto;
+		}
+
+		.team_item {
+		    text-align: center;
+		}
+
+		nav{
+			height: 60px;
+			line-height: 60px;
+			background-color: #2a2e48;
+		}
+		.top_line{
+			display: none;
+		}
+		.logo{
+			padding-top: 15px;
+		}
+		.menu_btn{
+			width: 40px;
+			height: 40px;
+			border-radius:50%;
+			background-color: #e84545;
+			color: #fff; 
+		}
+		.menu_btn span{
+			top: -15px;
+		}
+		#top_menu{
+			background-color: #2a2e48;
+			padding: 20px 0;
+			border-bottom: 1px solid #515369;
+			transition: 1s;
+		}
+		.menu li{
+			display: block;
+			text-align: center;
+		}
+		.menu li a{
+			display: block;
+		}
+		.menu li a:hover{
+			background-color: #fff;
+			color: #000;
+		}
+
+		.work_block {
+		    position: relative;
+		    margin: 20px auto 0px auto;
+		    width: 90%;
+		}
+
+		.work_block img {
+			width: 100%;
+		}
+
+		.team_item {
+		    padding-left: 2.6%;
+		}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	nav{
+		height: 60px;
+		line-height: 60px;
+		background-color: #2a2e48
+	}
+	.top_line{
+		display: none;
+	}
+	.logo{
+		padding-top: 15px;
+	}
+	.menu_btn{
+		width: 40px;
+		height: 40px;
+		border-radius:50%;
+		background-color: #e84545;
+		color: #fff; 
+	}
+
+
+	.menu_btn span{
+		top: -15px;
+	}
+	#top_menu{
+		background-color: #2a2e48;
+		padding: 20px 0;
+	}
+	.menu li{
+		display: block;
+		text-align: center;
+	}
+	.menu li a{
+		display: block;
+	}
+	.menu li a:hover{
+		background-color: #fff;
+		color: #000;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	nav{
+		height: 60px;
+		line-height: 60px;
+		background-color: #2a2e48
+	}
+	.top_line{
+		display: none;
+	}
+	.logo{
+		padding-top: 15px;
+	}
+	.menu_btn{
+		width: 40px;
+		height: 40px;
+		border-radius:50%;
+		background-color: #e84545;
+		color: #fff; 
+	}
+
+	.menu_btn span{
+		top: -15px;
+	}
+	#top_menu{
+		background-color: #2a2e48;
+		padding: 20px 0;
+	}
+	.menu li{
+		display: block;
+		text-align: center;
+	}
+	.menu li a{
+		display: block;
+	}
+	.menu li a:hover{background-color: #fff;
+		color: #000;}
+
+}
+
