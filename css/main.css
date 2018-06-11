@@ -220,14 +220,18 @@ p {
 /*work end*/
 /*portfolio*/
 .items {
-  display: grid;
-  grid-template-columns: 3fr auto;
-  align-items: center;
-  margin: 0 0 10px 0;
-  padding-right: 14px; }
+  margin: 0 0 10px 0; }
   .items .description {
     padding: 5px 15px 0px 15px !important;
-    margin: 8px 0 !important; }
+    margin: 8px 0 !important;
+    padding-right: 60px !important;
+    position: relative; }
+    .items .description .demo {
+      float: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
     .items .description svg {
       margin-right: 10px; }
   .items .demo a {
