@@ -1,69 +1,59 @@
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+
+@media only screen and (max-width: 1200px) {
 	#menu li {
 		margin: 6px;
 	}
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-	#menu span{
+
+@media only screen and (max-width: 992px) {
+	#menu span {
 		display: none;
 	}
-
 	.hamburger {
 		display: block;
 	}
-
 	#menu {
 		width: 60px;
 		left: 16px;
 	}
-
 	.opened-menu li {
-		margin: 5px 0 !important; }
-
+		margin: 5px 0 !important;
+	}
 	#menu .mobile-btn {
 		display: inline-block;
 	}
-
 	#logo {
 		left: 17px;
 	}
-
 	.portfolio-block {
 		grid-template-columns: 1fr 1fr;
 	}
-
 	.section {
 		padding-left: 10%;
 	}
-
-
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 767px) {
 
+@media only screen and (max-width: 767px) {
 	h2 {
 		font-size: 34px;
 	}
-
 	#logo {
 		left: 10px;
 		width: auto;
-}
-
-	#logo h1, #logo  span {
+	}
+	#logo h1, #logo span {
 		display: none;
 	}
-
 	#logo img {
 		margin-right: 0px;
 		border: 0px solid #eaeaea;
 		width: 45px;
 	}
-
 	#menu {
 		left: 10px;
 		display: inline-block;
@@ -75,70 +65,60 @@
 		border-radius: 100%;
 		text-align: center;
 	}
-
 	#menu li a svg {
 		margin-right: 0px;
 	}
-
 	#menu li a, #menu li.active a {
 		padding: 8px 8px;
 		display: inline-block;
 	}
-
 	#menu li.active a svg {
 		padding: 8px;
 		margin-bottom: -5px;
 		margin-right: -10px;
 		position: relative;
 	}
-
 	li.active {
 		background: transparent !important;
 	}
-
-
 	.section {
 		padding-left: 65px;
 		padding-right: 0px;
 	}
-
 	.wrapper {
 		padding-right: 5%;
 	}
 	#section6 {
 		padding-right: 15px;
 	}
-
 	#section6 img {
 		width: 75%;
 	}
-
 	.desc-only {
+		display: none;
+	}
+	.mobile-btn {
 		display: none;
 	}
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+
+@media only screen and (max-width: 480px) {
 	h2 {
 		font-size: 28px;
 	}
-
 	body, .wrap {
 		width: 100%;
 	}
-
 	.portfolio-block {
 		grid-template-columns: 1fr;
 	}
-
 	.title-menu {
 		font-size: 45px;
 	}
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
 
-}
-
+@media only screen and (max-width: 320px) {}
